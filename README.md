@@ -8,6 +8,6 @@ Groub_By_Subreddit.js
 ---------------------
 
 This script is used on Reddit.com on multireddit views.
-It reorders all links by subreddit and places a hearder above each.
+It reorders all links by subreddit and places a header above each.
 
 ![Example Picture](/imgs/Group_By_Subreddit.png "Group By Subreddit Example")
