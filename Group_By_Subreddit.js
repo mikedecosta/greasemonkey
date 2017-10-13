@@ -4,8 +4,11 @@
 // @namespace       groupbysubreddit
 // @description     Groups submissions by subreddit on main page
 // @include         http://www.reddit.com/*
+// @include         https://www.reddit.com/*
 // @exclude         http://www.reddit.com/message/*
 // @exclude         http://www.reddit.com/user/*
+// @exclude         https://www.reddit.com/message/*
+// @exclude         https://www.reddit.com/user/*
 // @grant           none
 // ==/UserScript==
 
@@ -13,6 +16,14 @@ var atags = document.getElementsByTagName('a');
 var sitetable = document.getElementById('siteTable');
 var myhash = new Object();
 var nextprev;
+
+function getParentDiv(node) {
+    while(node.classList.contains("thing") == false && node.parentNode) {
+        node = node.parentNode;
+    }
+
+    return node;
+}
 
 // build a hash of subreddit => array<submissions from that subreddit>
 for(i=0;i<atags.length;i++) {
@@ -24,7 +35,7 @@ for(i=0;i<atags.length;i++) {
             myhash[subreddit] = new Array();
             myhash[subreddit+"_link"] = node.href;
         }
-        var parentdiv = node.parentNode.parentNode.parentNode;
+        var parentdiv = getParentDiv(node);
         myhash[subreddit].push(parentdiv);
     }
 }
