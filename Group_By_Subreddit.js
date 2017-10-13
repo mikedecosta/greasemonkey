@@ -2,6 +2,7 @@
 // @name            Group By Subreddit
 // @author          Redditlien
 // @namespace       groupbysubreddit
+// @version         201710131432
 // @description     Groups submissions by subreddit on main page
 // @include         http://www.reddit.com/*
 // @include         https://www.reddit.com/*
