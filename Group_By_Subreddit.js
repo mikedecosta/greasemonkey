@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Group By Subreddit
-// @author          Redditlien
+// @author          mikedecosta
 // @namespace       groupbysubreddit
 // @version         201710131432
 // @description     Groups submissions by subreddit on main page
